@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="270pt"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_logistics"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawablePadding="16pt"
+            android:gravity="center"
+            android:text="物流"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_42pt"
+            app:drawableTopCompat="@mipmap/icon_logistics"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/tv_financing"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_financing"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawablePadding="16pt"
+            android:gravity="center"
+            android:text="财务"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_42pt"
+            app:drawableTopCompat="@mipmap/icon_financing"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@id/tv_logistics"
+            app:layout_constraintRight_toLeftOf="@id/tv_inspection"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_inspection"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawablePadding="16pt"
+            android:gravity="center"
+            android:text="地主"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_42pt"
+            app:drawableTopCompat="@mipmap/icon_inspection"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@id/tv_financing"
+            app:layout_constraintRight_toLeftOf="@id/tv_order"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_order"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawablePadding="16pt"
+            android:gravity="center"
+            android:text="工单"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_42pt"
+            app:drawableTopCompat="@mipmap/icon_order"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@id/tv_inspection"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

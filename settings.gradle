@@ -1,0 +1,8 @@
+include ':module-home'
+include ':module-main'
+include ':library-network'
+include ':lib-third'
+include ':lib-common'
+include ':lib-xpopup'
+include ':app'
+rootProject.name = "P8CarService"

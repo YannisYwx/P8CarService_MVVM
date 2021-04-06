@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="simpleBarHeight">144pt</dimen>
+    <dimen name="simpleBarTitle">16sp</dimen>
+    <dimen name="simpleBarSubtitle">12sp</dimen>
+    <dimen name="simpleBarAction">14sp</dimen>
+    <dimen name="mainLine">8dp</dimen>
+    <dimen name="secondLine">1dp</dimen>
+    <dimen name="itemRadius">3dp</dimen>
+
+    <dimen name="title_bar_height">144pt</dimen>
+    <dimen name="text_54pt">54pt</dimen><!--18sp 大字-->
+    <dimen name="text_48pt">48pt</dimen><!--15sp 中等字-->
+    <dimen name="text_42pt">42pt</dimen><!--15sp 中等字-->
+    <dimen name="text_36pt">36pt</dimen><!--12sp 小字-->
+    <dimen name="text_24pt">24pt</dimen><!--小字-->
+    <dimen name="dividerHeight">1pt</dimen><!--分割线高度-->
+
+</resources>

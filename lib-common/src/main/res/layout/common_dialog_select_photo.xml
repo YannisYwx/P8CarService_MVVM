@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="30pt"
+    android:paddingEnd="30pt"
+    android:paddingBottom="10pt">
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30pt"
+        android:background="@drawable/selector_w_r15pt"
+        android:padding="26pt"
+        android:text="取消"
+        android:textColor="@color/text_blue"
+        android:textSize="@dimen/text_48pt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_select_gallery" />
+
+    <TextView
+        android:id="@+id/tv_select_camera"
+        android:layout_width="0dp"
+        android:layout_height="160pt"
+        android:background="@drawable/selector_top_r15pt"
+        android:gravity="center"
+        android:padding="30pt"
+        android:text="拍摄照片"
+        android:textColor="@color/text_blue"
+        android:textSize="@dimen/text_48pt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_select_gallery"
+        android:layout_width="0dp"
+        android:layout_height="160pt"
+        android:background="@drawable/selector_bottom_r15pt"
+        android:gravity="center"
+        android:padding="30pt"
+        android:text="从相册中获取"
+        android:textColor="@color/text_blue"
+        android:textSize="@dimen/text_48pt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/v_line" />
+
+    <View
+        android:id="@+id/v_line"
+        android:layout_width="match_parent"
+        android:layout_height="3pt"
+        android:background="@color/silver"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_select_camera" />
+</androidx.constraintlayout.widget.ConstraintLayout>

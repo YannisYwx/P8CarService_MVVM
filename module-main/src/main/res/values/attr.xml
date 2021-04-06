@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TriangleIndicatorView">
+        <attr name="triangleColor" format="color" />
+        <attr name="tableSize" format="integer"/>
+        <attr name="openAnimator" format="boolean"/>
+    </declare-styleable>
+</resources>

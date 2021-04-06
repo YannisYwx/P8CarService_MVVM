@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="hmi"
+            type="com.p8.home.bean.HomeMultipleItem" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/v_top"
+            android:layout_width="match_parent"
+            android:layout_height="20pt"
+            android:visibility="@{hmi.userMenu.hasTopLine ? View.VISIBLE:View.GONE}"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="144pt"
+            android:background="@drawable/selector_item"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/v_top">
+
+            <ImageView
+                android:id="@+id/iv_icon"
+                android:layout_width="70pt"
+                android:layout_height="70pt"
+                android:layout_marginStart="40pt"
+                imgRes="@{hmi.userMenu.iconRes}"
+                android:scaleType="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_arrow"
+                android:layout_width="100pt"
+                android:layout_height="100pt"
+                android:layout_marginEnd="20pt"
+                android:scaleType="center"
+                android:src="@mipmap/icon_grey_arrow"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30pt"
+                android:text="@{hmi.userMenu.menuLabel}"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/text_42pt"
+                app:layout_constraintBottom_toBottomOf="@id/iv_icon"
+                app:layout_constraintLeft_toRightOf="@id/iv_icon"
+                app:layout_constraintTop_toTopOf="@id/iv_icon" />
+
+            <View
+                android:id="@+id/v_bottom_line"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dividerHeight"
+                android:layout_marginStart="60pt"
+                android:layout_marginEnd="60pt"
+                android:background="@color/lightGray"
+                android:visibility="@{hmi.userMenu.hasBottomLine ? View.VISIBLE:View.GONE}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

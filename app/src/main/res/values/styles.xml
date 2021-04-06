@@ -1,0 +1,29 @@
+<resources>
+    <!-- Base application theme. -->
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--控制标题栏颜色-->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <!--控制状态栏颜色-->
+        <item name="colorPrimaryDark">@color/white</item>
+        <!--控制activity 内容部分的大部分颜色-->
+        <item name="colorAccent">@color/themeBlue</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">false</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="colorControlHighlight">#1000</item><!--波纹颜色-->
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:dividerHeight">0.68dp</item>
+        <item name="android:listDivider">@drawable/common_list_divider</item><!--统一list item 间隔线-->
+<!--        <item name="android:listSelector">@drawable/common_list_selector</item>&lt;!&ndash;统一list item点击效果&ndash;&gt;-->
+        <item name="android:windowBackground">@color/window_bg</item><!--统一窗体背景颜色-->
+        <item name="actionBarSize">144pt</item>
+        <item name="android:actionBarSize">144pt</item>
+    </style>
+
+    <style name="NullTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+</resources>

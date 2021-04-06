@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.p8.main.mvvm.viewmodel.LoginViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/v_top_bg"
+            android:layout_width="match_parent"
+            android:layout_height="640pt"
+            android:background="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200pt"
+            android:drawableStart="@mipmap/logo"
+            android:drawablePadding="30pt"
+            android:gravity="center"
+            android:text="欢迎使用P8车服"
+            android:textColor="#3B3B5B"
+            android:textSize="80pt"
+            app:layout_constraintLeft_toLeftOf="@id/v_top_bg"
+            app:layout_constraintRight_toRightOf="@id/v_top_bg"
+            app:layout_constraintTop_toTopOf="@id/v_top_bg" />
+
+        <TextView
+            android:id="@+id/tv_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30pt"
+            android:text="专注运营互联网物联网智能停车管理平台"
+            android:textColor="#CDCDD6"
+            android:textSize="@dimen/text_48pt"
+            app:layout_constraintLeft_toLeftOf="@id/v_top_bg"
+            app:layout_constraintRight_toRightOf="@id/v_top_bg"
+            app:layout_constraintTop_toBottomOf="@id/tv_welcome" />
+
+        <TextView
+            android:id="@+id/tv_login"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="40pt"
+            android:gravity="center"
+            android:text="登录"
+            android:textColor="@color/selector_color_login_register"
+            android:textSize="@dimen/text_54pt"
+            app:layout_constraintBottom_toBottomOf="@id/v_top_bg"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toLeftOf="@id/v_top_bg"
+            app:layout_constraintRight_toLeftOf="@id/tv_register" />
+
+        <TextView
+            android:id="@+id/tv_register"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="40pt"
+            android:gravity="center"
+            android:text="注册"
+            android:textColor="@color/selector_color_login_register"
+            android:textSize="@dimen/text_54pt"
+            app:layout_constraintBottom_toBottomOf="@id/v_top_bg"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@id/tv_login"
+            app:layout_constraintRight_toRightOf="@id/v_top_bg" />
+
+        <com.p8.main.widget.TriangleIndicatorView
+            android:id="@+id/v_tiv"
+            android:layout_width="match_parent"
+            android:layout_height="40pt"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/v_top_bg"
+            app:openAnimator="true"
+            app:tableSize="2"
+            app:triangleColor="@color/white" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:constraint_referenced_ids="btn_login,
+        tv_forget_pwd,tv_user,tv_password,
+        v_line_password,v_line_user,et_password,et_userName" />
+
+        <TextView
+            android:id="@+id/tv_user"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60pt"
+            android:layout_marginTop="60pt"
+            android:gravity="start"
+            android:text="用户名"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_54pt"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/et_userName"
+            app:layout_constraintTop_toBottomOf="@id/v_tiv" />
+
+        <EditText
+            android:id="@+id/et_userName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:textColor="@color/text_deep_gray"
+            android:textSize="@dimen/text_54pt"
+            android:text="@={viewModel.userName}"
+            app:layout_constraintBottom_toBottomOf="@id/tv_user"
+            app:layout_constraintHorizontal_weight="4"
+            app:layout_constraintLeft_toRightOf="@id/tv_user"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_user" />
+
+        <View
+            android:id="@+id/v_line_user"
+            android:layout_width="0dp"
+            android:layout_height="3pt"
+            android:layout_marginTop="30pt"
+            android:background="@color/line_gray"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_user" />
+
+
+        <TextView
+            android:id="@+id/tv_password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60pt"
+            android:layout_marginTop="60pt"
+            android:gravity="start"
+            android:text="密码"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_54pt"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/et_userName"
+            app:layout_constraintTop_toBottomOf="@id/v_line_user" />
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:digits="0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:inputType="textPassword"
+            android:textColor="@color/text_deep_gray"
+            android:textSize="@dimen/text_54pt"
+            android:text="@={viewModel.password}"
+            app:layout_constraintBottom_toBottomOf="@id/tv_password"
+            app:layout_constraintHorizontal_weight="4"
+            app:layout_constraintLeft_toRightOf="@id/tv_password"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_password" />
+
+        <View
+            android:id="@+id/v_line_password"
+            android:layout_width="0dp"
+            android:layout_height="3pt"
+            android:layout_marginTop="30pt"
+            android:background="@color/line_gray"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_password" />
+
+        <Button
+            android:id="@+id/btn_login"
+            style="@style/NormalButton"
+            android:layout_marginTop="80pt"
+            android:text="立即登录"
+            app:onClickCommand="@{viewModel.loginOnClickCommand}"
+            app:isThrottleFirst="true"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/v_line_password" />
+
+
+        <TextView
+            android:id="@+id/tv_forget_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="60pt"
+            android:text="忘记密码？"
+            android:textColor="@color/text_deep_gray"
+            android:textSize="@dimen/text_54pt"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

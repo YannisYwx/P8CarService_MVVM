@@ -1,0 +1,117 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    }
+    sourceSets {
+        main {
+            assets.srcDirs = ['src/main/assets', 'src/main/assets/']
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    api project(':lib-xpopup')
+
+    api rootProject.ext.androidx["design"]
+    api rootProject.ext.androidx["constraintlayout"]
+    api rootProject.ext.androidx["appcompat"]
+    api rootProject.ext.androidx["constraintlayout"]
+    api rootProject.ext.androidx["recyclerview"]
+    api rootProject.ext.androidx["junit"]
+    api rootProject.ext.androidx["runner"]
+    api rootProject.ext.androidx["espresso-core"]
+    api rootProject.ext.androidx["lifecycle-extensions"]
+    api rootProject.ext.androidx["multidex"]
+    api rootProject.ext.androidx["viewpager2"]
+
+    api rootProject.ext.dependencies["arouter-api"]
+    api rootProject.ext.dependencies["rxjava"]
+    api rootProject.ext.dependencies["rxandroid"]
+    api rootProject.ext.dependencies["eventbus"]
+    api rootProject.ext.dependencies["glide"]
+
+    //network
+    api rootProject.ext.dependencies["okhttp"]
+    api rootProject.ext.dependencies["retrofit"]
+    api rootProject.ext.dependencies["converter-gson"]
+    api rootProject.ext.dependencies["adapter-rxjava"]
+    api rootProject.ext.dependencies["logging-interceptor"]
+    api rootProject.ext.dependencies["gson"]
+
+    api rootProject.ext.dependencies["mmkv"]
+
+
+    //rx管理View的生命周期
+    api rootProject.ext.dependencies["rxjava"]
+    api rootProject.ext.dependencies["rxandroid"]
+    //rx权限请求
+    api rootProject.ext.dependencies["rxpermissions"]
+    api rootProject.ext.dependencies["utilcode"]
+    api rootProject.ext.dependencies["loadsir"]
+    api rootProject.ext.dependencies["titlebar"]
+    api rootProject.ext.dependencies["lottie"]
+//    api rootProject.ext.dependencies["autosize"]
+    api rootProject.ext.dependencies["SmartRefreshLayout"]
+    api rootProject.ext.dependencies["indicatorseekbar"]
+    api rootProject.ext.dependencies["BaseRecyclerViewAdapterHelper"]
+    api rootProject.ext.dependencies["picture_library"]
+    api rootProject.ext.dependencies["PickerView"]
+    api rootProject.ext.dependencies["rxbinding"]
+
+    debugApi rootProject.ext.dependencies["leakcanary"]
+    releaseApi rootProject.ext.dependencies["leakcanary-no-op"]
+    api rootProject.ext.dependencies["AVLoading"]
+    api rootProject.ext.dependencies["EasyNavigation"]
+    api rootProject.ext.dependencies["MagicIndicator"]
+//    api rootProject.ext.dependencies["banner"]
+    api rootProject.ext.dependencies["ratingbar"]
+    api rootProject.ext.dependencies["labelview"]
+    api rootProject.ext.dependencies["FlowLayout"]
+    api rootProject.ext.dependencies["greendao"]
+    api rootProject.ext.dependencies["MarqueeView"]
+//    api rootProject.ext.dependencies["xpopup"]
+    api rootProject.ext.dependencies["toast"]
+    api rootProject.ext.dependencies["bga-qrcode-zxing"]
+    api rootProject.ext.dependencies["roundedimageview"]
+    api rootProject.ext.dependencies["aspectjrt"]
+    api (rootProject.ext.dependencies["okaspect"],{
+        exclude group: 'androidx.appcompat', module: 'appcompat'
+    })
+    api rootProject.ext.dependencies["location"]
+    api rootProject.ext.dependencies["customactivityoncrash"]
+    api rootProject.ext.dependencies["crashreport_upgrade"]
+    api rootProject.ext.dependencies["tinker-android-lib"]
+    api rootProject.ext.dependencies["SkeletonBlock"]
+    api rootProject.ext.dependencies["RxCache"]
+    api rootProject.ext.dependencies["Jolyglot-gson"]
+    api rootProject.ext.dependencies["backgroundlib"]
+    api rootProject.ext.dependencies["Slidr"]
+    api rootProject.ext.dependencies["agentweb"]
+    api rootProject.ext.dependencies["agentweb_filechooser"]
+    api rootProject.ext.dependencies["agentweb_downloader"]
+    api rootProject.ext.dependencies["bmob"]
+    api rootProject.ext.dependencies["overscroll-decor"]
+    api rootProject.ext.dependencies["BannerViewPager"]
+    api rootProject.ext.dependencies["viewpagerindicator"]
+    api rootProject.ext.dependencies["immersionbar"]
+    api rootProject.ext.dependencies["fragmentation"]
+    api rootProject.ext.dependencies["aliOss"]
+
+}

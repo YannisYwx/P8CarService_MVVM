@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="FontStyleTextView">
+        <attr name="fontPath" format="reference|string" />
+    </declare-styleable>
+
+    <!-- 定义了一个新的属性,用来指定hint-->
+    <attr name="hint" format="reference|string" />
+    <!--显示密码的图标是否可见-->
+    <attr name="isPswIcon" format="boolean" />
+    <!--删除图标是否可见-->
+    <attr name="isDeletable" format="boolean" />
+    <!--是否显示底部分割线-->
+    <attr name="isShowBottomLine" format="boolean" />
+    <!--图标-->
+    <attr name="icon" format="reference" />
+
+    <!--轮询view-->
+    <declare-styleable name="WheelView">
+        <attr name="wv_gravity">
+            <enum name="center" value="17" />
+            <enum name="left" value="3" />
+            <enum name="right" value="5" />
+        </attr>
+        <attr name="wv_textSize" format="dimension" />
+        <attr name="wv_textColorOut" format="color" />
+        <attr name="wv_textColorCenter" format="color" />
+        <attr name="wv_dividerColor" format="color" />
+        <attr name="wv_select_textBackground" format="color" />
+        <attr name="wv_dividerWidth" format="dimension" />
+        <attr name="wv_lineSpacingMultiplier" format="float" />
+    </declare-styleable>
+
+    <!--侧滑布局-->
+    <declare-styleable name="SwipeRevealLayout">
+        <attr name="dragEdge">
+            <flag name="left" value="1" />
+            <flag name="right" value="2" />
+            <flag name="top" value="4" />
+            <flag name="bottom" value="8" />
+        </attr>
+
+        <attr name="srl_mode">
+            <enum name="normal" value="0" />
+            <enum name="same_level" value="1" />
+        </attr>
+
+        <attr name="flingVelocity" format="integer" />
+
+        <attr name="minDistRequestDisallowParent" format="dimension" />
+    </declare-styleable>
+
+    <!--圆形ImageView-->
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_circle_background_color" format="color" />
+    </declare-styleable>
+
+    <!--通用item-->
+    <declare-styleable name="CommonItemView">
+        <attr name="icon" />
+        <attr name="label" format="string" />
+        <attr name="arrow" format="reference" />
+        <attr name="hasBottomLine" format="boolean" />
+        <attr name="hasArrow" format="boolean" />
+        <attr name="dividerPaddingLeft" format="dimension" />
+        <attr name="dividerPaddingRight" format="dimension" />
+        <attr name="labelColor" format="color" />
+        <attr name="textRightColor" format="color" />
+        <attr name="dividerColor" format="color" />
+        <attr name="dividerHeight" format="dimension" />
+    </declare-styleable>
+</resources>

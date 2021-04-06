@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="user"
+            type="com.p8.common.bean.Agency" />
+
+        <variable
+            name="headerClick"
+            type="com.p8.common.binding.command.BindingCommand" />
+
+        <variable
+            name="backClick"
+            type="com.p8.common.binding.command.BindingCommand" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="500pt"
+        android:background="@mipmap/home_top_bg">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30pt"
+            android:src="@mipmap/icon_back"
+            onClickCommand="@{backClick}"
+            app:layout_constraintBottom_toBottomOf="@id/tv_main_title"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_main_title" />
+
+        <TextView
+            android:id="@+id/tv_main_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="大主"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_54pt"
+            android:visibility="visible"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/v_status_h" />
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30pt"
+            android:layout_marginTop="183pt"
+            android:text="@{user.name}"
+            android:textColor="@color/alpha_95_white"
+            android:textSize="60pt"
+            app:layout_constraintLeft_toRightOf="@id/civ_user_header"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_user_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="38pt"
+            android:text="@{user.phone}"
+            android:textColor="@color/alpha_80_white"
+            android:textSize="@dimen/text_48pt"
+            app:layout_constraintBottom_toBottomOf="@id/civ_user_header"
+            app:layout_constraintLeft_toLeftOf="@id/tv_user_name"
+            app:layout_constraintLeft_toRightOf="@id/civ_user_header"
+            app:layout_constraintTop_toTopOf="@id/civ_user_header" />
+
+        <TextView
+            android:id="@+id/tv_user_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="38pt"
+            android:text="@{@string/agency_num + user.idCard}"
+            android:textColor="@color/alpha_85_white"
+            android:textSize="@dimen/text_36pt"
+            app:layout_constraintBottom_toBottomOf="@id/civ_user_header"
+            app:layout_constraintLeft_toLeftOf="@id/tv_user_name"
+            app:layout_constraintLeft_toRightOf="@id/civ_user_header" />
+
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18pt"
+            android:drawablePadding="8pt"
+            android:lines="1"
+            android:text="所属辖区：深圳市南山区西丽茶光"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_36pt"
+            app:drawableStartCompat="@mipmap/icon_location"
+            app:layout_constraintLeft_toLeftOf="@id/civ_user_header"
+            app:layout_constraintTop_toBottomOf="@id/civ_user_header" />
+
+        <TextView
+            android:id="@+id/tv_sign_in"
+            android:layout_width="260pt"
+            android:layout_height="90pt"
+            android:background="@drawable/shape_sign_in"
+            android:gravity="center"
+            android:paddingStart="30pt"
+            android:paddingEnd="30pt"
+            android:text="每日签到"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_36pt"
+            app:drawableStartCompat="@mipmap/icon_calendar"
+            app:layout_constraintBottom_toBottomOf="@id/civ_user_header"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/civ_user_header" />
+
+        <View
+            android:id="@+id/v_status_h"
+            android:layout_width="match_parent"
+            android:layout_height="80pt"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.p8.common.widget.CircleImageView
+            android:id="@+id/civ_user_header"
+            android:layout_width="200pt"
+            android:layout_height="200pt"
+            android:layout_marginStart="50pt"
+            android:layout_marginTop="20pt"
+            app:onClickCommand="@{headerClick}"
+            android:src="@mipmap/default_avatar"
+            app:civ_border_color="@color/white"
+            app:civ_border_overlay="true"
+            app:civ_border_width="6pt"
+            app:civ_circle_background_color="@color/grey"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_main_title" />
+
+        <TextView
+            android:id="@+id/tv_user_tag"
+            android:layout_width="50pt"
+            android:layout_height="50pt"
+            android:layout_marginEnd="10pt"
+            android:layout_marginBottom="5pt"
+            android:background="@drawable/shape_user_tag"
+            android:gravity="center"
+            android:text="大"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_36pt"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/civ_user_header"
+            app:layout_constraintRight_toRightOf="@id/civ_user_header" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

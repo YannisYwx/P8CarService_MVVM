@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fl_ctb"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.wuhenzhizao.titlebar.widget.CommonTitleBar
+        android:id="@+id/ctb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:centerCustomView="@layout/common_layout_titlebar_center"
+        app:centerType="customView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:leftCustomView="@layout/common_layout_titlebar_left"
+        app:leftType="customView"
+        app:rightCustomView="@layout/common_layout_titlebar_right"
+        app:rightTextColor="@color/white"
+        app:rightType="customView"
+        app:statusBarColor="@color/colorPrimary"
+        app:fillStatusBar="false"
+        app:statusBarMode="light"
+        app:titleBarColor="@color/colorPrimary"
+        app:titleBarHeight="@dimen/simpleBarHeight" />
+</FrameLayout>

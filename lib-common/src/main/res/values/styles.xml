@@ -1,0 +1,144 @@
+<resources>
+    <!-- Base application theme. -->
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--控制标题栏颜色-->
+        <item name="colorPrimary">@color/themeBlue</item>
+        <!--控制状态栏颜色-->
+        <item name="colorPrimaryDark">@color/white</item>
+        <!--控制activity 内容部分的大部分颜色-->
+        <item name="colorAccent">@color/themeBlue</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">false</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="colorControlHighlight">#1000</item><!--波纹颜色-->
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:dividerHeight">0.68dp</item>
+        <item name="android:listDivider">@drawable/common_list_divider</item><!--统一list item 间隔线-->
+        <item name="android:listSelector">@drawable/common_list_selector</item><!--统一list item点击效果-->
+        <item name="android:windowBackground">@color/window_bg</item><!--统一窗体背景颜色-->
+        <item name="actionBarSize">144pt</item>
+        <item name="android:actionBarSize">144pt</item>
+    </style>
+
+    <style name="m_white_bg_dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+
+    <style name="FadeInPopWin">
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowEnterAnimation">@anim/pop_win_content_fade_in</item>
+        <item name="android:windowExitAnimation">@anim/pop_win_content_fade_out</item>
+    </style>
+
+    <!--登录注册 编辑框的样式-->
+    <style name="GroupEditText">
+        <item name="android:layout_marginRight">90pt</item>
+        <item name="android:layout_marginLeft">90pt</item>
+    </style>
+
+    <style name="TextLabel">
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:textSize">42pt</item>
+        <item name="android:layout_height">160pt</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:paddingStart">40pt</item>
+    </style>
+
+    <style name="CommonEditText">
+        <item name="android:background">@drawable/shape_white_radius_5</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">@dimen/text_36pt</item>
+        <item name="android:textColorHint">@color/lightGray</item>
+        <item name="android:layout_height">90pt</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:paddingStart">30pt</item>
+    </style>
+
+    <!--底部tab的样式-->
+    <style name="TabStyle">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/tab_text_color</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">150pt</item>
+        <item name="android:textSize">@dimen/text_36pt</item>
+        <item name="android:padding">10pt</item>
+        <item name="android:layout_marginTop">6pt</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <!--通用按钮的样式-->
+    <style name="NormalButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">135pt</item>
+        <item name="android:background">@drawable/normal_button_selector</item>
+        <item name="android:layout_marginLeft">60pt</item>
+        <item name="android:layout_marginRight">60pt</item>
+        <item name="android:textSize">54pt</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="PopupAnimation" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/popup_enter</item>
+        <item name="android:windowExitAnimation">@anim/popup_exit</item>
+    </style>
+
+    <style name="dialog" parent="android:style/Theme.Dialog">
+        <item name="android:background">#00000000</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="tab_appearance">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="text_36_grey">
+        <item name="android:textSize">36pt</item>
+        <item name="android:textColor">#666666</item>
+    </style>
+
+    <style name="text_bold_32">
+        <item name="android:textSize">42pt</item>
+        <item name="android:textColor">#666666</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="text_bold_32.black" parent="text_bold_32">
+        <item name="android:textColor">#000</item>
+    </style>
+
+    <style name="text_item_menu_42">
+        <item name="android:textSize">42pt</item>
+        <item name="android:textColor">#666666</item>
+        <item name="android:padding">40pt</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="text_item_menu_42.grey" parent="text_item_menu_42">
+        <item name="android:textColor">#999999</item>
+    </style>
+
+    <style name="text_item_menu_42.black" parent="text_item_menu_42">
+        <item name="android:textColor">#333333</item>
+    </style>
+
+    <style name="text_item_menu_42.red" parent="text_item_menu_42">
+        <item name="android:textColor">@color/info_appraisal</item>
+    </style>
+
+</resources>

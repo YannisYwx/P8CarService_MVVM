@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="vm"
+            type="com.p8.home.mvvm.viewmodel.MineViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.p8.common.widget.CommonItemView
+            android:id="@+id/civ_modify_password"
+            android:layout_width="match_parent"
+            android:layout_height="144pt"
+            android:background="@drawable/selector_item"
+            app:arrow="@mipmap/icon_grey_arrow"
+            app:dividerColor="@color/lightGray"
+            app:dividerPaddingLeft="50pt"
+            app:dividerPaddingRight="50pt"
+            android:onClick="@{()->vm.eventHandler.onModifyPassword()}"
+            app:hasBottomLine="true"
+            app:label="修改密码"
+            app:labelColor="@color/text_black"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.p8.common.widget.CommonItemView
+            android:id="@+id/civ_app_update"
+            android:layout_width="match_parent"
+            android:layout_height="144pt"
+            android:background="@drawable/selector_item"
+            android:onClick="@{()->vm.eventHandler.onAppUpdate()}"
+            app:arrow="@mipmap/icon_grey_arrow"
+            app:dividerColor="@color/lightGray"
+            app:dividerPaddingLeft="50pt"
+            app:dividerPaddingRight="50pt"
+            app:hasBottomLine="true"
+            app:label="App更新"
+            app:labelColor="@color/text_black"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/civ_modify_password" />
+
+        <com.p8.common.widget.CommonItemView
+            android:id="@+id/civ_clear_cache"
+            rightText="@{vm.appCache}"
+            android:layout_width="match_parent"
+            android:layout_height="144pt"
+            android:onClick="@{()->vm.eventHandler.onCacheClear()}"
+            android:background="@drawable/selector_item"
+            app:arrow="@mipmap/icon_grey_arrow"
+            app:dividerColor="@color/lightGray"
+            app:dividerHeight="5pt"
+            app:label="清除缓存"
+            app:labelColor="@color/text_black"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/civ_app_update"
+            app:textRightColor="@color/orangeRed" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
